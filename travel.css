@@ -1,4 +1,4 @@
-/* Google Fonts */
+ 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
@@ -9,8 +9,8 @@
 }
 
 :root {
-    --primary-color: #ff5722; /* Orange color for travel vibe */
-    --secondary-color: #2c3e50; /* Dark blue/grey */
+    --primary-color: #ff5722;  
+    --secondary-color: #2c3e50;  
     --text-color: #333;
     --bg-color: #ffffff;
     --transition: all 0.3s ease;
@@ -35,16 +35,24 @@
     margin: 0 auto;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    text-decoration: none;
-}
+ .logo-container {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     padding: 10px 20px;
+ }
 
-.logo span {
-    color: var(--primary-color);
-}
+
+ .logo-img {
+     width: 160px;
+     transition: transform 0.3s ease;
+ }
+
+
+ .logo-img:hover {
+     transform: scale(1.05);
+     cursor: pointer;
+ }
 
 .main-nav .nav-list {
     display: flex;
@@ -52,7 +60,7 @@
     gap: 2.5rem;
 }
 
-/* CSS Hover Animations for Links */
+ 
 .nav-link {
     text-decoration: none;
     color: var(--secondary-color);
@@ -121,7 +129,7 @@
     transform: translateY(-2px);
 }
 
-/* Hamburger Menu styles */
+ 
 .hamburger {
     display: none;
     cursor: pointer;
@@ -137,7 +145,7 @@
     border-radius: 3px;
 }
 
-/* Mobile Responsive */
+ 
 @media (max-width: 992px) {
     .hamburger {
         display: block;
@@ -176,7 +184,7 @@
         flex-direction: column;
     }
 
-    /* Hamburger Animation to Cross (X) */
+     
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
