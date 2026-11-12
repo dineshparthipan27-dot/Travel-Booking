@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraising Campaign</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="travel.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header and Navigation Section -->
+    <header class="site-header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="404.html" class="logo">Travel<span>Machan</span></a>
+
+            <!-- Navigation Links -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#destinations" class="nav-link">Destinations</a></li>
+                    <li class="nav-item"><a href="#hotels" class="nav-link">Hotels</a></li>
+                    <li class="nav-item"><a href="#offers" class="nav-link">Special Offers</a></li>
+                </ul>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="header-actions" id="headerActions">
+                <a href="404.html" class="btn login-btn">Login</a>
+                <a href="404.html" class="btn signup-btn">Sign Up</a>
+            </div>
+
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section with Destination Search -->
+    <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Explore the World <br> with <span>TravelMachan</span></h1>
+            <p class="hero-subtitle">Find awesome flights, hotels, and tours tailored just for you!</p>
+
+            <!-- Destination Search Form with AOS Animation -->
+            <div class="search-box-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <form action="404.html" class="search-form" id="searchForm">
+                    <!-- Location Input -->
+                    <div class="input-wrapper-col">
+                        <div class="input-group" id="locationGroup">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" id="locationInput" placeholder="Where are you going?">
+                        </div>
+                        <small class="error-msg" id="locationError"></small>
+                    </div>
+
+                    <!-- Date Input -->
+                    <div class="input-wrapper-col">
+                        <div class="input-group" id="dateGroup">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="text" id="dateInput" placeholder="Check-in Date" onfocus="(this.type='date')">
+                        </div>
+                        <small class="error-msg" id="dateError"></small>
+                    </div>
+
+                    <!-- Guest Input -->
+                    <div class="input-wrapper-col">
+                        <div class="input-group" id="guestGroup">
+                            <i class="fas fa-user"></i>
+                            <input type="number" id="guestInput" placeholder="Guests" min="1">
+                        </div>
+                        <small class="error-msg" id="guestError"></small>
+                    </div>
+
+                    <!-- Submit Button with Loading State -->
+                    <button type="submit" class="btn search-btn" id="searchBtn">
+                        <span class="btn-text">Search</span>
+                        <span class="loader" id="btnLoader" style="display: none;"><i
+                                class="fas fa-spinner fa-spin"></i> Loading...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Popular Destinations Section (Modern Overlap Layout) -->
+    <section class="destinations-section-v2" id="destinations">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">Popular <span>Destinations</span></h2>
+                <p class="section-subtitle">Top places recommended by our travel experts</p>
+            </div>
+
+            <!-- Destinations List (Horizontal Overlap Style) -->
+            <div class="destinations-list">
+
+                <!-- Destination Card 1 (Image Left, Content Right) -->
+                <div class="destination-item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="dest-img-box">
+                        <img src="https://images.unsplash.com/photo-1512453979436-5a53696524dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Dubai">
+                        <div class="dest-rating"><i class="fas fa-star"></i> 4.8</div>
+                    </div>
+                    <div class="dest-content-box">
+                        <div class="dest-tag">Top Choice</div>
+                        <h3>Desert Safari & City Tour</h3>
+                        <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Dubai, UAE</p>
+                        <p class="dest-desc">Experience the thrill of the dunes and the luxury of the city in one
+                            unforgettable trip. A perfect blend of modern architecture and traditional culture.</p>
+                        <div class="dest-bottom">
+                            <div class="dest-price">$299 <span>/person</span></div>
+                            <a href="404.html" class="btn btn-outline">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 2 (Content Left, Image Right - Reversed) -->
+                <div class="destination-item reversed" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="dest-img-box">
+                        <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Maldives">
+                        <div class="dest-rating"><i class="fas fa-star"></i> 4.9</div>
+                    </div>
+                    <div class="dest-content-box">
+                        <div class="dest-tag">Honeymoon Special</div>
+                        <h3>Luxury Beach Resort</h3>
+                        <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Male, Maldives</p>
+                        <p class="dest-desc">Relax in pristine waters and enjoy world-class hospitality in your private
+                            water villa. Wake up to the sound of waves and stunning ocean views.</p>
+                        <div class="dest-bottom">
+                            <div class="dest-price">$599 <span>/person</span></div>
+                            <a href="404.html" class="btn btn-outline">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 3 (Image Left, Content Right) -->
+                <div class="destination-item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="dest-img-box">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Paris">
+                        <div class="dest-rating"><i class="fas fa-star"></i> 4.7</div>
+                    </div>
+                    <div class="dest-content-box">
+                        <div class="dest-tag">Romantic Getaway</div>
+                        <h3>Eiffel Tower Experience</h3>
+                        <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+                        <p class="dest-desc">Stroll through the streets of Paris, enjoy authentic French cuisine, and
+                            take in the breathtaking views from the iconic Eiffel Tower.</p>
+                        <div class="dest-bottom">
+                            <div class="dest-price">$399 <span>/person</span></div>
+                            <a href="404.html" class="btn btn-outline">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination Card 4 (Content Left, Image Right - Reversed) -->
+                <div class="destination-item reversed" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="dest-img-box">
+                        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Switzerland">
+                        <div class="dest-rating"><i class="fas fa-star"></i> 4.9</div>
+                    </div>
+                    <div class="dest-content-box">
+                        <div class="dest-tag">Nature Explorer</div>
+                        <h3>Alpine Mountain Adventure</h3>
+                        <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Lucerne, Switzerland</p>
+                        <p class="dest-desc">Discover the majestic Swiss Alps, ride the panoramic trains, and immerse
+                            yourself in the beauty of crystal-clear lakes and green valleys.</p>
+                        <div class="dest-bottom">
+                            <div class="dest-price">$450 <span>/person</span></div>
+                            <a href="404.html" class="btn btn-outline">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Hotels Section (Dynamic & Filterable) -->
+    <section class="hotels-section" id="hotels">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header hotel-header">
+                <h2 class="section-title">Featured <span>Hotels</span></h2>
+                <p class="section-subtitle">Experience luxury and comfort at its best</p>
+            </div>
+
+            <!-- Hotel Filters & Sorting Controls -->
+            <div class="hotel-controls" data-aos="fade-up">
+                <div class="filter-group">
+                    <label for="priceFilter">Max Price: $<span id="priceValue">300</span></label>
+                    <input type="range" id="priceFilter" min="50" max="500" value="300" step="10">
+                </div>
+
+                <div class="filter-group">
+                    <select id="ratingFilter">
+                        <option value="0">All Ratings</option>
+                        <option value="4.5">4.5+ Stars</option>
+                        <option value="4.8">4.8+ Stars</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <select id="sortFilter">
+                        <option value="default">Sort By: Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Hotels Grid (Empty - Will be rendered by JS) -->
+            <div class="hotels-grid" id="dynamicHotelsGrid">
+                <!-- JS will inject hotel cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="offers-section" id="offers">
+        <div class="offers-overlay"></div>
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header offer-header">
+                <h2 class="section-title text-white">Special <span>Offers</span></h2>
+                <p class="section-subtitle text-light">Grab these limited-time deals before they're gone!</p>
+            </div>
+
+            <!-- Offers Grid -->
+            <div class="offers-grid">
+
+                <!-- Offer Card 1 -->
+                <div class="offer-card glass-effect" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="offer-discount">
+                        <span>30%</span> OFF
+                    </div>
+                    <div class="offer-content">
+                        <h3>Honeymoon Special in Maldives</h3>
+                        <p>Book your 5-night stay and get a complimentary couples spa & romantic dinner.</p>
+
+                        <div class="promo-code copy-trigger" data-code="LUV30" title="Click to copy code">
+                            <span>Code:</span> <strong>LUV30</strong>
+                            <i class="far fa-copy copy-icon"></i>
+                        </div>
+
+                        <button class="btn offer-btn copy-trigger" data-code="LUV30">Claim Offer</button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 2 -->
+                <div class="offer-card glass-effect" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="offer-discount">
+                        <span>$200</span> OFF
+                    </div>
+                    <div class="offer-content">
+                        <h3>Europe Backpacking Tour</h3>
+                        <p>14 Days across 5 countries. Flights, hostels, and train passes included!</p>
+
+                        <div class="promo-code copy-trigger" data-code="EU200" title="Click to copy code">
+                            <span>Code:</span> <strong>EU200</strong>
+                            <i class="far fa-copy copy-icon"></i>
+                        </div>
+
+                        <button class="btn offer-btn copy-trigger" data-code="EU200">Claim Offer</button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 3 (Newly Added) -->
+                <div class="offer-card glass-effect" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="offer-discount">
+                        <span>25%</span> OFF
+                    </div>
+                    <div class="offer-content">
+                        <h3>Dubai Luxury Escape</h3>
+                        <p>4 nights in a 5-star hotel with premium desert safari & Burj Khalifa top access.</p>
+
+                        <div class="promo-code copy-trigger" data-code="DXB25" title="Click to copy code">
+                            <span>Code:</span> <strong>DXB25</strong>
+                            <i class="far fa-copy copy-icon"></i>
+                        </div>
+
+                        <button class="btn offer-btn copy-trigger" data-code="DXB25">Claim Offer</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- Why Choose Us Section (Modern Zig-Zag Layout) -->
+    <section class="why-choose-us-v2" id="why-choose-us">
+        <div class="container why-container">
+
+            <!-- Left Side: Heading and Content -->
+            <div class="why-left-content">
+                <h2 class="section-title">Why <span>Choose Us</span></h2>
+                <p class="section-subtitle">We don't just plan trips; we craft unforgettable experiences. Here is why
+                    thousands of travelers trust us with their holidays.</p>
+
+                <ul class="why-list">
+                    <li><i class="fas fa-check-circle"></i> 10+ Years of Experience</li>
+                    <li><i class="fas fa-check-circle"></i> 50,000+ Happy Customers</li>
+                    <li><i class="fas fa-check-circle"></i> 100% Custom-Tailored Trips</li>
+                </ul>
+
+                <button class="btn btn-primary why-btn">Learn More About Us</button>
+            </div>
+
+            <!-- Right Side: Staggered Features Grid -->
+            <div class="why-right-grid">
+                <!-- Feature Card 1 -->
+                <div class="modern-feature-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="icon-box">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>Unbeatable prices for premium experiences. No hidden fees.</p>
+                </div>
+
+                <!-- Feature Card 2 (Pushed Down) -->
+                <div class="modern-feature-card push-down" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="150">
+                    <div class="icon-box">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Worldwide Coverage</h3>
+                    <p>Over 100+ destinations handpicked by our travel experts.</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="modern-feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="icon-box">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Expert Local Guides</h3>
+                    <p>Discover hidden gems with our certified local companions.</p>
+                </div>
+
+                <!-- Feature Card 4 (Pushed Down) -->
+                <div class="modern-feature-card push-down" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="450">
+                    <div class="icon-box">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>We are always here for you, anywhere and anytime.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Customer Testimonials Section (Infinite Marquee Layout) -->
+    <section class="testimonials-v3" id="testimonials">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">What Our <span>Travelers Say</span></h2>
+                <p class="section-subtitle">Real stories from our happy customers around the world.</p>
+            </div>
+        </div>
+
+        <!-- Marquee Slider Container -->
+        <div class="marquee-wrapper">
+
+            <!-- Track 1: Moves Left -->
+            <div class="marquee-track track-left">
+                <!-- 3 Unique Cards -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Sarah Johnson" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Visited Switzerland</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"An absolutely unforgettable experience! The itinerary was perfectly planned,
+                        and the local guides were incredibly knowledgeable. Seamless and stress-free."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="David Smith" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>David Smith</h4>
+                            <p>Visited Japan</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 4.8</div>
+                    </div>
+                    <p class="review-text">"From booking flights to finding the best sushi spots in Tokyo, everything
+                        was handled professionally. Highly recommend their services for exploring new cultures."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Emma Wilson" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Emma Wilson</h4>
+                            <p>Visited Bali</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"The resort they recommended was out of this world! Everything was exactly as
+                        promised. The 24/7 support gave us so much peace of mind during our honeymoon."</p>
+                </div>
+
+                <!-- Duplicated Cards for Infinite Loop -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Sarah Johnson" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Visited Switzerland</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"An absolutely unforgettable experience! The itinerary was perfectly planned,
+                        and the local guides were incredibly knowledgeable. Seamless and stress-free."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="David Smith" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>David Smith</h4>
+                            <p>Visited Japan</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 4.8</div>
+                    </div>
+                    <p class="review-text">"From booking flights to finding the best sushi spots in Tokyo, everything
+                        was handled professionally. Highly recommend their services for exploring new cultures."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Emma Wilson" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Emma Wilson</h4>
+                            <p>Visited Bali</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"The resort they recommended was out of this world! Everything was exactly as
+                        promised. The 24/7 support gave us so much peace of mind during our honeymoon."</p>
+                </div>
+            </div>
+
+            <!-- Track 2: Moves Right -->
+            <div class="marquee-track track-right">
+                <!-- 3 Unique Cards -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Michael Brown" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Michael Brown</h4>
+                            <p>Visited Dubai</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"The desert safari was beyond amazing. From the thrilling dune bashing to the
+                        BBQ dinner under the stars, they organized everything to perfection. Worth every penny!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Priya Patel" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Priya Patel</h4>
+                            <p>Visited Paris</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 4.9</div>
+                    </div>
+                    <p class="review-text">"A truly romantic getaway! The hotel was right next to the Eiffel Tower just
+                        as requested. The customized city tour made us feel like VIPs. Thank you TravelMachan!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Liam Davis" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Liam Davis</h4>
+                            <p>Visited Maldives</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"I couldn't have asked for a better holiday. The water villa was stunning,
+                        and the scuba diving sessions they arranged were the highlight of my trip. Highly recommended!"
+                    </p>
+                </div>
+
+                <!-- Duplicated Cards for Infinite Loop -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Michael Brown" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Michael Brown</h4>
+                            <p>Visited Dubai</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"The desert safari was beyond amazing. From the thrilling dune bashing to the
+                        BBQ dinner under the stars, they organized everything to perfection. Worth every penny!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Priya Patel" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Priya Patel</h4>
+                            <p>Visited Paris</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 4.9</div>
+                    </div>
+                    <p class="review-text">"A truly romantic getaway! The hotel was right next to the Eiffel Tower just
+                        as requested. The customized city tour made us feel like VIPs. Thank you TravelMachan!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                            alt="Liam Davis" class="avatar">
+                        <div class="reviewer-info">
+                            <h4>Liam Davis</h4>
+                            <p>Visited Maldives</p>
+                        </div>
+                        <div class="review-rating"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <p class="review-text">"I couldn't have asked for a better holiday. The water villa was stunning,
+                        and the scuba diving sessions they arranged were the highlight of my trip. Highly recommended!"
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Newsletter Subscription Section -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <!-- Newsletter Box (Animated with AOS) -->
+            <div class="newsletter-container" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Subscribe to our <span>Newsletter</span></h2>
+                    <p class="newsletter-subtitle">Get the latest travel updates, hidden gems, and exclusive holiday
+                        offers straight to your inbox.</p>
+
+                    <!-- Subscription Form -->
+                    <!-- Subscription Form -->
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <div class="input-wrapper-col" style="flex: 1;">
+                            <div class="input-wrapper" id="emailWrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="emailInput" placeholder="Enter your email address">
+                            </div>
+                            <!-- Error Message -->
+                            <small class="error-msg" id="emailError" style="left: 20px; bottom: -25px;"></small>
+                        </div>
+
+                        <button type="submit" class="btn subscribe-btn" id="subscribeBtn">
+                            <span class="btn-text">Subscribe Now</span>
+                            <span class="loader" id="subLoader" style="display: none;"><i
+                                    class="fas fa-spinner fa-spin"></i> wait...</span>
+                        </button>
+                    </form>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <p class="success-message" id="successMessage" style="display: none; margin-top: 20px;">
+                        <i class="fas fa-check-circle"></i>  ou've successfully subscribed. 
+                    </p>
+ 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Brand Info -->
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="404.html" class="footer-logo">Travel<span>Machan</span></a>
+                    <p class="footer-desc">Your ultimate travel partner. We create unforgettable experiences and help
+                        you explore the world's most beautiful destinations with ease and comfort.</p>
+                    <div class="social-icons">
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#destinations"><i class="fas fa-chevron-right"></i> Destinations</a></li>
+                        <li><a href="#hotels"><i class="fas fa-chevron-right"></i> Featured Hotels</a></li>
+                        <li><a href="#offers"><i class="fas fa-chevron-right"></i> Special Offers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Support -->
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="404.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="404.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="404.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="404.html"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="footer-col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 TravelMachan St, Chennai, Tamil Nadu</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@travelmachan.com</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container flex-bottom">
+                <p>&copy; 2026 Stackly. All Rights Reserved.</p>
+             </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+        AOS.init({
+            once: true, // Animation happens only once
+            offset: 100 // Trigger point
+        });
+
+        window.addEventListener('load', () => {
+            // GSAP Animation for Hero Title
+            gsap.from(".hero-title", {
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                delay: 0.5,
+                ease: "power3.out"
+            });
+
+            // GSAP Animation for Hero Subtitle
+            gsap.from(".hero-subtitle", {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                delay: 0.8,
+                ease: "power3.out"
+            });
+
+        });
+
+
+
+
+
+
+        window.addEventListener('load', () => {
+            // Animate the Hotels Section Header
+            gsap.from(".hotel-header", {
+                scrollTrigger: {
+                    trigger: ".hotels-section",
+                    start: "top 80%", // Animation starts when section is 80% in view
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                scale: 0.9,
+                y: 30,
+                duration: 0.8,
+                ease: "back.out(1.5)"
+            });
+        });
+
+
+        window.addEventListener('load', () => {
+            // Animate the Offers Section Header
+            gsap.from(".offer-header", {
+                scrollTrigger: {
+                    trigger: ".offers-section",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                y: -30,
+                duration: 1,
+                ease: "power2.out"
+            });
+        });
+
+
+
+        window.addEventListener('load', () => {
+            // Animate the Left Content sliding in from left
+            gsap.from(".why-left-content", {
+                scrollTrigger: {
+                    trigger: ".why-choose-us-v2",
+                    start: "top 75%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                x: -50,
+                duration: 1,
+                ease: "power3.out"
+            });
+
+            // AOS handles the right side grid animations
+        });
+
+
+
+        window.addEventListener('load', () => {
+            // Animate the Testimonials Section Header
+            gsap.from(".testimonial-header", {
+                scrollTrigger: {
+                    trigger: ".testimonials-section",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                scale: 0.9,
+                y: 30,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+        });
+
+
+        window.addEventListener('load', () => {
+            // GSAP Animation for Inner Content of Newsletter
+            gsap.from(".newsletter-title, .newsletter-subtitle, .newsletter-form", {
+                scrollTrigger: {
+                    trigger: ".newsletter-section",
+                    start: "top 85%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                stagger: 0.2, // Items appear one by one
+                ease: "power2.out"
+            });
+        });
+
+       
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
